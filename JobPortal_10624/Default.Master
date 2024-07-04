@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="JobPortal_10624.Default" %>
+<%@ Register Src="~/Header.ascx" TagName="He1" TagPrefix="Hdr1" %>
+<%@ Register Src="~/Footer.ascx" TagName="Fo1" TagPrefix="Foot1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <script src="jquery.js"></script>
+     <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+  <tr>
+    <td>
+      <hdr1:He1 ID="He1" runat="server" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="menu">
+        <ul class="menu">
+         <li><a href="JobRecruiterModule/JobRecruiter_Registration.aspx" class="parent"><span>JobRecruiter SignUp</span></a>
+         <li><a href="JobSeekerModule/JobSeeker_Registration.aspx" class="parent"><span>JobSeeker SignUp</span></a>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="height:350px;vertical-align:top; background-color:lightgreen";>
+      <center>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <Foot1:Fo1 ID="Fo1" runat="server" />
+    </td>
+  </tr>
+</table>
+        </div>
+    </form>
+</body>
+</html>

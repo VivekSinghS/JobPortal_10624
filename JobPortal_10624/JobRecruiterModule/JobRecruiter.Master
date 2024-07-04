@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="JobRecruiter.master.cs" Inherits="JobPortal_10624.JobRecruiterModule.JobRecruiter" %>
+<%@ Register Src="~/Header.ascx" TagName="He1" TagPrefix="Hdr1" %>
+<%@ Register Src="~/Footer.ascx" TagName="Fo1" TagPrefix="Foot1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+      <script src="../jquery.js"></script>
+      <link href="../menu.css" rel="stylesheet" />
+       <script src="../menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                        <table>
+  <tr>
+    <td>
+      <hdr1:He1 ID="He1" runat="server" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div id="menu">
+        <ul class="menu">
+            
+               <li><a href="JobRecruiterHome.aspx" class="parent"><span>Home</span></a>
+               <li><a href="JobRecruiter_JobPost.aspx" class="parent"><span>Job Post</span></a></li>
+               <li><a href="JobRecruiter_JobPostList.aspx" class="parent"><span>List ofJob Post</span></a></li>
+               <li><a href="JobRecruiter_ChangePassword.aspx" class="parent"><span>Change Password</span></a></li>
+               <li><a href="JobRecruiter_LogOut.aspx" class="parent"><span>LogOut</span></a></li>
+         
+      </ul>
+    </div>
+  </td>
+ </tr>
+  <tr>
+    <td style="height:350px;vertical-align:top; background-color:lightgreen";>
+      <center>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <Foot1:Fo1 ID="Fo1" runat="server" />
+    </td>
+  </tr>
+</table>
+        </div>
+    </form>
+</body>
+</html>
